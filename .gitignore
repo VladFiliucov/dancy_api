@@ -43,3 +43,6 @@ config/secrets.yml
 
 # Dump files
 dump.rdb
+
+# Code coverage assets
+coverage/*
