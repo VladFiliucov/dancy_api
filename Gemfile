@@ -26,6 +26,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'database_cleaner', '~> 1.6.2'
 end
 
 group :development do
@@ -35,7 +36,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry', '~> 0.11.3'
   gem 'pry-rails', '~> 0.3.6'
-  gem 'database_cleaner', '~> 1.6.2'
 end
 
 group :test do
