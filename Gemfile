@@ -3,14 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0.beta2'
-# Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
-# Use Puma as the app server
 gem 'puma', '~> 3.11'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -38,7 +33,22 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry', '~> 0.11.3'
+  gem 'pry-rails', '~> 0.3.6'
+  gem 'database_cleaner', '~> 1.6.2'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+group :test do
+  gem 'simplecov', :require => false
+  gem 'factory_bot_rails', '~> 4.8.2'
+  gem 'factory_bot', '~> 4.8.2'
+  gem 'shoulda-matchers', '~> 3.1.2'
+  gem 'rspec-core'
+  gem 'rspec-expectations'
+  gem 'rspec-mocks'
+  gem 'rspec-rails', '~> 3.7.2'
+  gem 'rspec-support'
+  gem 'json_spec', '~> 1.1.5'
+end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
